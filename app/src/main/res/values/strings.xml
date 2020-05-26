@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ABCNews</string>
+    <string name="abc_heading">ABC UPDATED NEWS</string>
+    <string name="tag_line">Welcome to \nABCNews</string>
+    <string name="guardianNewsURL">https://content.guardianapis.com/search?</string>
+    <string name="error_message">Something went wrong \n try again</string>
+</resources>

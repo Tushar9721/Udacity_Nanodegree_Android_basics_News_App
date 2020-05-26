@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewParticularNews"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/four_dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/four_dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_background"
+        android:padding="@dimen/ten_dp">
+
+        <TextView
+            android:id="@+id/AbcNewsTagLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/four_dp"
+            android:fontFamily="serif"
+            android:textSize="@dimen/twenty_sp" />
+
+        <TextView
+            android:id="@+id/AbcNewsTypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AbcNewsTagLine"
+            android:fontFamily="serif-monospace"
+            android:textSize="@dimen/twenty_sp" />
+
+        <TextView
+            android:id="@+id/AbcNewsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AbcNewsTagLine"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:fontFamily="serif-monospace"
+            android:textSize="@dimen/twenty_sp" />
+
+        <TextView
+            android:id="@+id/AbcNewsTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AbcNewsTypeName"
+            android:fontFamily="serif-monospace"
+            android:textSize="@dimen/twenty_sp" />
+
+        <TextView
+            android:id="@+id/AbcNewsAuthorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AbcNewsTime"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="serif-monospace"
+            android:padding="@dimen/ten_dp"
+            android:textSize="@dimen/twenty_sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
