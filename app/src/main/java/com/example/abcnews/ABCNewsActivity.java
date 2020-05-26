@@ -58,8 +58,6 @@ public class ABCNewsActivity extends AppCompatActivity implements LoaderManager.
         }
 
 
-
-
     }
 
     //function to check the internet connection...
@@ -78,10 +76,18 @@ public class ABCNewsActivity extends AppCompatActivity implements LoaderManager.
 
     //setting the adapter....
     private void setAdapter() {
-        SettingNewsDataAdapter settingNewsDataAdapter = new SettingNewsDataAdapter(this, newsList);
-        newRecyclerView.setHasFixedSize(true);
-        newRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        newRecyclerView.setAdapter(settingNewsDataAdapter);
+        if (!newsList.isEmpty()) {
+            SettingNewsDataAdapter settingNewsDataAdapter = new SettingNewsDataAdapter(this, newsList);
+            newRecyclerView.setHasFixedSize(true);
+            newRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+            newRecyclerView.setAdapter(settingNewsDataAdapter);
+        }
+        else{
+            progressBar.setVisibility(View.GONE);
+            newRecyclerView.setVisibility(View.GONE);
+            somethingWentWrong.setVisibility(View.VISIBLE);
+        }
+
     }
 
 
