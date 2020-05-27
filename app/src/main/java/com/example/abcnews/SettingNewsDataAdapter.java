@@ -42,7 +42,6 @@ public class SettingNewsDataAdapter extends RecyclerView.Adapter<SettingNewsData
         holder.AbcNewsTagLine.setText(newData.get(position).getAbcNewsHeading());
         holder.AbcNewsTypeName.setText(newData.get(position).getAbcNewsType());
         holder.AbcNewsDate.setText(newData.get(position).getAbcNewsDate());
-        holder.AbcNewsAuthorName.setText(newData.get(position).getAbcNewsAuthor());
         holder.AbcNewsTime.setText(newData.get(position).getAbcNewsTime());
 
         holder.cardViewParticularNews.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +67,6 @@ public class SettingNewsDataAdapter extends RecyclerView.Adapter<SettingNewsData
         TextView AbcNewsTagLine;
         TextView AbcNewsTypeName;
         TextView AbcNewsDate;
-        TextView AbcNewsAuthorName;
         CardView cardViewParticularNews;
         TextView AbcNewsTime;
 
@@ -78,7 +76,6 @@ public class SettingNewsDataAdapter extends RecyclerView.Adapter<SettingNewsData
             AbcNewsTagLine = itemView.findViewById(R.id.AbcNewsTagLine);
             AbcNewsTypeName = itemView.findViewById(R.id.AbcNewsTypeName);
             AbcNewsDate = itemView.findViewById(R.id.AbcNewsDate);
-            AbcNewsAuthorName = itemView.findViewById(R.id.AbcNewsAuthorName);
             cardViewParticularNews = itemView.findViewById(R.id.cardViewParticularNews);
             AbcNewsTime = itemView.findViewById(R.id.AbcNewsTime);
 

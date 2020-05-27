@@ -4,13 +4,10 @@ package com.example.abcnews;
 // this is the data class for our news channel.
 
 /**
- *
  * @author tusha
- *
  */
 
 public class DataClassNews {
-    private String abcNewsAuthor;
     private String abcNewsHeading;
     private String abcNewsDate;
     private String abcNewsType;
@@ -18,8 +15,7 @@ public class DataClassNews {
     private String abcNewsTime;
 
 
-    public DataClassNews(String abcNewsAuthor, String abcNewsHeading, String abcNewsDate, String abcNewsType, String abcNewsURL, String abcNewsTime) {
-        this.abcNewsAuthor = abcNewsAuthor;
+    public DataClassNews(String abcNewsHeading, String abcNewsDate, String abcNewsType, String abcNewsURL, String abcNewsTime) {
         this.abcNewsHeading = abcNewsHeading;
         this.abcNewsDate = abcNewsDate;
         this.abcNewsType = abcNewsType;
@@ -35,13 +31,6 @@ public class DataClassNews {
         this.abcNewsTime = abcNewsTime;
     }
 
-    public String getAbcNewsAuthor() {
-        return abcNewsAuthor;
-    }
-
-    public void setAbcNewsAuthor(String abcNewsAuthor) {
-        this.abcNewsAuthor = abcNewsAuthor;
-    }
 
     public String getAbcNewsHeading() {
         return abcNewsHeading;

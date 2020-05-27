@@ -99,21 +99,19 @@ public class QueryUtils {
             for (int newData = 0; newData < abcNewsArrayResult.length(); newData++) {
                 JSONObject jsonObject = abcNewsArrayResult.getJSONObject(newData);
 
-                String newsTypeName = jsonObject.getString("sectionName");
                 String newsTagLine = jsonObject.getString("webTitle");
-                String newsUrl = jsonObject.getString("webUrl");
+                String newsTypeName = jsonObject.getString("sectionName");
                 String newsDate = jsonObject.optString("webPublicationDate");
+                String newsUrl = jsonObject.getString("webUrl");
+
 
                 //splitting the data and time
                 String[] abcNewsTime = newsDate.split("T");
                 String dateOnly = abcNewsTime[0];
                 String time = abcNewsTime[1];
+                String timeUpdated = time.substring(0, 5);
 
-                String abcAuthorName = "";
-              
-
-
-                DataClassNews newsData = new DataClassNews(abcAuthorName, newsTagLine, dateOnly, newsTypeName, newsUrl, time);
+                DataClassNews newsData = new DataClassNews(newsTagLine, dateOnly, newsTypeName, newsUrl, timeUpdated);
                 arrayListAbcNews.add(newsData);
                 Log.e("size", "1");
 
