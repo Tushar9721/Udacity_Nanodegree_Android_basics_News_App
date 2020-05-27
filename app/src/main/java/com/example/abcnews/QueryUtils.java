@@ -99,6 +99,20 @@ public class QueryUtils {
             for (int newData = 0; newData < abcNewsArrayResult.length(); newData++) {
                 JSONObject jsonObject = abcNewsArrayResult.getJSONObject(newData);
 
+                String abcNewsAuthor = "";
+                //to get the author details...
+                JSONArray authorArray = jsonObject.getJSONArray("tags");
+                if (authorArray.length() == 0) {
+                    abcNewsAuthor = "None";
+                } else {
+
+                    for (int details = 0; details < authorArray.length(); details++) {
+                        JSONObject innerObjectAuthor = authorArray.getJSONObject(details);
+                        abcNewsAuthor = innerObjectAuthor.getString("webTitle");
+                    }
+
+                }
+
                 String newsTagLine = jsonObject.getString("webTitle");
                 String newsTypeName = jsonObject.getString("sectionName");
                 String newsDate = jsonObject.optString("webPublicationDate");
@@ -111,7 +125,7 @@ public class QueryUtils {
                 String time = abcNewsTime[1];
                 String timeUpdated = time.substring(0, 5);
 
-                DataClassNews newsData = new DataClassNews(newsTagLine, dateOnly, newsTypeName, newsUrl, timeUpdated);
+                DataClassNews newsData = new DataClassNews(abcNewsAuthor,newsTagLine, dateOnly, newsTypeName, newsUrl, timeUpdated);
                 arrayListAbcNews.add(newsData);
                 Log.e("size", "1");
 

@@ -50,6 +50,16 @@
             android:fontFamily="serif-monospace"
             android:textSize="@dimen/twenty_sp" />
 
+        <TextView
+            android:id="@+id/AbcNewsAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/AbcNewsTime"
+            android:gravity="center"
+            android:padding="@dimen/four_dp"
+            android:fontFamily="serif-monospace"
+            android:textSize="@dimen/twenty_sp" />
+
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -13,14 +13,24 @@ public class DataClassNews {
     private String abcNewsType;
     private String abcNewsURL;
     private String abcNewsTime;
+    private String abcAuthorName;
 
 
-    public DataClassNews(String abcNewsHeading, String abcNewsDate, String abcNewsType, String abcNewsURL, String abcNewsTime) {
+    public DataClassNews(String abcAuthorName, String abcNewsHeading, String abcNewsDate, String abcNewsType, String abcNewsURL, String abcNewsTime) {
         this.abcNewsHeading = abcNewsHeading;
         this.abcNewsDate = abcNewsDate;
         this.abcNewsType = abcNewsType;
         this.abcNewsURL = abcNewsURL;
         this.abcNewsTime = abcNewsTime;
+        this.abcAuthorName = abcAuthorName;
+    }
+
+    public String getAbcAuthorName() {
+        return abcAuthorName;
+    }
+
+    public void setAbcAuthorName(String abcAuthorName) {
+        this.abcAuthorName = abcAuthorName;
     }
 
     public String getAbcNewsTime() {

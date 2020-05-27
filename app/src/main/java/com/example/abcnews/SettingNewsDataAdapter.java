@@ -43,12 +43,12 @@ public class SettingNewsDataAdapter extends RecyclerView.Adapter<SettingNewsData
         holder.AbcNewsTypeName.setText(newData.get(position).getAbcNewsType());
         holder.AbcNewsDate.setText(newData.get(position).getAbcNewsDate());
         holder.AbcNewsTime.setText(newData.get(position).getAbcNewsTime());
+        holder.AbcNewsAuthor.setText(newData.get(position).getAbcAuthorName());
 
         holder.cardViewParticularNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri openNewsInBrowser = Uri.parse(newData.get(position).getAbcNewsURL());
-
                 Intent browser = new Intent(Intent.ACTION_VIEW, openNewsInBrowser);
                 context.startActivity(browser);
             }
@@ -68,6 +68,7 @@ public class SettingNewsDataAdapter extends RecyclerView.Adapter<SettingNewsData
         TextView AbcNewsTypeName;
         TextView AbcNewsDate;
         CardView cardViewParticularNews;
+        TextView AbcNewsAuthor;
         TextView AbcNewsTime;
 
         public ViewHolder(@NonNull View itemView) {
@@ -78,6 +79,7 @@ public class SettingNewsDataAdapter extends RecyclerView.Adapter<SettingNewsData
             AbcNewsDate = itemView.findViewById(R.id.AbcNewsDate);
             cardViewParticularNews = itemView.findViewById(R.id.cardViewParticularNews);
             AbcNewsTime = itemView.findViewById(R.id.AbcNewsTime);
+            AbcNewsAuthor = itemView.findViewById(R.id.AbcNewsAuthor);
 
         }
     }

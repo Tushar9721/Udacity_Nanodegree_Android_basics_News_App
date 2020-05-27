@@ -97,8 +97,10 @@ public class ABCNewsActivity extends AppCompatActivity implements LoaderManager.
         Uri uriUrlGuardian = Uri.parse(guardianUrl);
         Uri.Builder builder = uriUrlGuardian.buildUpon();
 
+        //appending tags to get other details...
+        builder.appendQueryParameter("show-tags", "contributor");
         //appending the api key in our url...
-        builder.appendQueryParameter("api-key", "2ff5707e-02cc-4843-b373-626fc57c2afc");
+        builder.appendQueryParameter("api-key", getString(R.string.api_key));
 
         return new NewsLoader(this, builder.toString());
     }
